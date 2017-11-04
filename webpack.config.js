@@ -1,17 +1,19 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
-    filename: "bundle_tags.css",
+    filename: "css/tags.css",
     disable: process.env.NODE_ENV === "development"
 });
 
 const path = require('path');
 module.exports = {
-    watch: true,
-    entry: './src/js_tags.js',
+    // watch: true,
+    entry: {
+        tags: './src/js/tags.js'
+    },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle_tags.js'
+        path: path.resolve(__dirname, 'dist/public'),
+        filename: 'js/[name].js'
     },
     module: {
         rules: [
@@ -32,14 +34,14 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
-                    'file-loader'
+                    'file-loader?publicPath=../&name=images/[name].[ext]'
                 ]
             },
             // loading fonts
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 use: [
-                    'file-loader'
+                    'file-loader?publicPath=../&name=fonts/[name].[ext]'
                 ]
             }
         ]
