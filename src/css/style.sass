@@ -1,0 +1,145 @@
+// ======================
+// Screen sizes
+// ======================
+@mixin mobile_view
+  @media only screen and (min-width : 480px)
+    @content
+@mixin tablet_view
+  @media only screen and (min-width : 768px)
+    @content
+@mixin pc_view
+  @media only screen and (min-width : 1024px)
+    @content
+@mixin tv_view
+  @media only screen and (min-width : 1200px)
+    @content
+
+// ======================
+// Define variables
+// ======================
+$main-color: #E54d42
+$font-color-title: #131313
+$font-color-content: #555555
+$font-color-minor: #808080
+$gray-light: #F2F2F2
+
+@font-face
+  font-family: 'ProximaNovaSoft'
+  src: url(../fonts/ProximaNovaSoft.otf)
+
+@font-face
+  font-family: 'FontAwesome'
+  src: url(../fonts/FontAwesome.otf)
+
+// ======================
+// Default
+// ======================
+body
+  font-family: ProximaNovaSoft, Times, serif
+  font-size: 1em
+  background: $gray-light
+
+
+main
+  width: 100%
+  max-width: 1200px
+  margin: 0 auto
+  
+.fontAwesome
+  font-family: FontAwesome
+  display: inline-block
+
+// ======================
+// Post listing
+// ======================
+.listing
+  width: 100%
+  &__title
+    width: 100%
+    text-align: center
+    color: $font-color-title
+    margin: 40px 0 10px
+  &__posts
+    float: left
+    width: 100%
+    .post
+      float: left
+      position: relative
+      width: calc(100% - 20px)
+      margin: 20px 10px
+      padding-top: 115px
+      background: $gray-light
+      background-size: 100%
+      box-shadow: 0 0 20px 5px rgba(211,211,211,0.5)
+      //-moz-box-shadow: 0px 0px 10px 5px rgba(211,211,211,0.5)
+      //-webkit-box-shadow: 0px 0px 10px 5px rgba(211,211,211,0.5)
+      &:before
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        content: ''
+        background: gray
+        opacity: .5
+      +tablet_view
+        width: calc(50% - 20px)
+      +pc_view
+        width: calc(25% - 20px)
+      &__date
+        position: absolute
+        top: 20px
+        right: 20px
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        background: $main-color
+        text-align: center
+        display: table
+        span
+          display: table-cell
+          vertical-align: middle
+          color: white
+          font-size: .85em
+      &__container
+        position: relative
+        background: white
+        box-sizing: border-box
+        padding: 25px
+        .post__photo
+          position: absolute
+          left: 0
+          top: -30px
+          width: 70px
+          height: 30px
+          line-height: 30px
+          text-align: center
+          font-size: .85em
+          color: white
+          background: $main-color
+          cursor: pointer
+        .post__title
+          margin: 0 0 15px
+          color: $font-color-title
+        .post__desc
+          color: $main-color
+          font-weight: bold
+        .post__detail
+          margin: 20px 0 30px
+          color: $font-color-content
+          line-height: 1.5em
+        .post__info
+          color: $font-color-minor
+          &__time
+            display: inline-block
+            margin-right: 10px
+            .fontAwesome
+              &:before
+                content: "\F017"
+                margin-right: 3px
+          &__comment
+            display: inline-block
+            .fontAwesome
+              &:before
+                content: "\F086"
+                margin-right: 3px

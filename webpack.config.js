@@ -1,15 +1,16 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
-    filename: "css/tags.css",
+    filename: "css/[name].css",
     disable: process.env.NODE_ENV === "development"
 });
 
 const path = require('path');
 module.exports = {
-    // watch: true,
+    watch: true,
     entry: {
-        tags: './src/js/tags.js'
+        tags: './src/js/tags.js',
+        home: './src/js/home.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist/public'),
