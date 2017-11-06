@@ -1,56 +1,58 @@
 @font-face {
-  font-family: 'stayJapan-icon';
-  src: url(../fonts/font-icon-stayJapan.ttf); }
+    font-family: 'stayJapan-icon';
+    src: url(../fonts/font-icon-stayJapan.ttf); }
 
 .tag__plate .plate__icon {
-  position: relative;
-  display: inline-block;
-  width: 2.5em;
-  height: 2.5em;
-  margin-right: .5em;
-  border: solid 1px #808080;
-  border-radius: 50%;
-  vertical-align: middle; }
-  .tag__plate .plate__icon .icon__inner {
+    position: relative;
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    margin-right: .5em;
+    border: solid 1px #808080;
+    border-radius: 50%;
+    vertical-align: middle; }
+.tag__plate .plate__icon .icon__inner {
     display: table;
     width: 100%;
     text-align: center; }
-    .tag__plate .plate__icon .icon__inner .icon__image {
-      display: table-cell;
-      width: 1.5em;
-      height: 2.5em;
-      vertical-align: middle;
-      color: #808080; }
-      .tag__plate .plate__icon .icon__inner .icon__image:after {
-        font-family: 'stayJapan-icon' !important;
-        content: '\E900';
-        font-size: 1.5em;
-        color: red; }
+.tag__plate .plate__icon .icon__inner .icon__image {
+    display: table-cell;
+    width: 1.5em;
+    height: 2.5em;
+    vertical-align: middle;
+    color: #808080; }
+.tag__plate .plate__icon .icon__inner .icon__image:after {
+    font-family: 'stayJapan-icon' !important;
+    content: '\E900';
+    font-size: 1.5em;
+    color: red; }
 
 .articles .articles__item {
-  padding: 32px 0; }
-  .articles .articles__item .articles__item__headline {
+    padding: 32px 0; }
+.articles .articles__item .articles__item__headline {
     margin: 0; }
-    .articles .articles__item .articles__item__headline h2#top-header {
-      margin: 0 0 10px 0;
-      color: #A9A9A9;
-      font-size: 1.6rem;
-      font-weight: bold;
-      border: none; }
-    .articles .articles__item .articles__item__headline .articles__item__headline__content {
-      font-size: 1.4rem; }
-  @media (min-width: 1024px) {
+.articles .articles__item .articles__item__headline h2#top-header {
+    margin: 0 0 10px 0;
+    color: #A9A9A9;
+    font-size: 25.6px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: none; }
+.articles .articles__item .articles__item__headline .articles__item__headline__content {
+    font-size: 22.4px;
+    font-size: 1.4rem; }
+@media (min-width: 1024px) {
     .articles .articles__item {
-      border-bottom: 1px solid #D3D3D3; }
-      .articles .articles__item .articles__item__headline {
+        border-bottom: 1px solid #D3D3D3; }
+    .articles .articles__item .articles__item__headline {
         display: inline-block;
         vertical-align: top;
         width: 29%; }
-        .articles .articles__item .articles__item__headline h2 {
-          margin: 0 0 10px;
-          color: #A9A9A9;
-          font-size: 1.6rem;
-          font-weight: bold; }
-      .articles .articles__item .articles__item__content {
+    .articles .articles__item .articles__item__headline h2 {
+        margin: 0 0 10px;
+        color: #A9A9A9;
+        font-size: 1.6rem;
+        font-weight: bold; }
+    .articles .articles__item .articles__item__content {
         display: inline-block;
         width: 71%; } }

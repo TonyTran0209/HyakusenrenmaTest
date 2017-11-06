@@ -1,111 +1,113 @@
 @font-face {
-  font-family: 'ProximaNovaSoft';
-  src: url(../fonts/ProximaNovaSoft.otf); }
+    font-family: 'ProximaNovaSoft';
+    src: url(../fonts/ProximaNovaSoft.otf); }
 
 @font-face {
-  font-family: 'FontAwesome';
-  src: url(../fonts/FontAwesome.otf); }
+    font-family: 'FontAwesome';
+    src: url(../fonts/FontAwesome.otf); }
 
 body {
-  font-family: ProximaNovaSoft, Times, serif;
-  font-size: 1em;
-  background: #F2F2F2; }
+    font-family: ProximaNovaSoft, Times, serif;
+    font-size: 1em;
+    background: #F2F2F2; }
 
 main {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto; }
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; }
 
 .fontAwesome {
-  font-family: FontAwesome;
-  display: inline-block; }
+    font-family: FontAwesome;
+    display: inline-block; }
 
 .listing {
-  width: 100%; }
-  .listing__title {
+    width: 100%; }
+.listing__title {
     width: 100%;
     text-align: center;
     color: #131313;
     margin: 40px 0 10px; }
-  .listing__posts {
+.listing__posts {
     float: left;
     width: 100%; }
+.listing__posts .post {
+    float: left;
+    position: relative;
+    width: calc(100% - 20px);
+    margin: 20px 10px;
+    padding-top: 115px;
+    background: #F2F2F2;
+    background-size: 100%;
+    -webkit-box-shadow: 0 0 20px 5px rgba(211, 211, 211, .5);
+    box-shadow: 0 0 20px 5px rgba(211, 211, 211, .5); }
+.listing__posts .post:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background: gray;
+    opacity: .5; }
+@media only screen and (min-width: 768px) {
     .listing__posts .post {
-      float: left;
-      position: relative;
-      width: calc(100% - 20px);
-      margin: 20px 10px;
-      padding-top: 115px;
-      background: #F2F2F2;
-      background-size: 100%;
-      box-shadow: 0 0 20px 5px rgba(211, 211, 211, 0.5); }
-      .listing__posts .post:before {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        content: '';
-        background: gray;
-        opacity: .5; }
-      @media only screen and (min-width: 768px) {
-        .listing__posts .post {
-          width: calc(50% - 20px); } }
-      @media only screen and (min-width: 1024px) {
-        .listing__posts .post {
-          width: calc(25% - 20px); } }
-      .listing__posts .post__date {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: #E54d42;
-        text-align: center;
-        display: table; }
-        .listing__posts .post__date span {
-          display: table-cell;
-          vertical-align: middle;
-          color: white;
-          font-size: .85em; }
-      .listing__posts .post__container {
-        position: relative;
-        background: white;
-        box-sizing: border-box;
-        padding: 25px; }
-        .listing__posts .post__container .post__photo {
-          position: absolute;
-          left: 0;
-          top: -30px;
-          width: 70px;
-          height: 30px;
-          line-height: 30px;
-          text-align: center;
-          font-size: .85em;
-          color: white;
-          background: #E54d42;
-          cursor: pointer; }
-        .listing__posts .post__container .post__title {
-          margin: 0 0 15px;
-          color: #131313; }
-        .listing__posts .post__container .post__desc {
-          color: #E54d42;
-          font-weight: bold; }
-        .listing__posts .post__container .post__detail {
-          margin: 20px 0 30px;
-          color: #555555;
-          line-height: 1.5em; }
-        .listing__posts .post__container .post__info {
-          color: #808080; }
-          .listing__posts .post__container .post__info__time {
-            display: inline-block;
-            margin-right: 10px; }
-            .listing__posts .post__container .post__info__time .fontAwesome:before {
-              content: "\F017";
-              margin-right: 3px; }
-          .listing__posts .post__container .post__info__comment {
-            display: inline-block; }
-            .listing__posts .post__container .post__info__comment .fontAwesome:before {
-              content: "\F086";
-              margin-right: 3px; }
+        width: calc(50% - 20px); } }
+@media only screen and (min-width: 1024px) {
+    .listing__posts .post {
+        width: calc(25% - 20px); } }
+.listing__posts .post__date {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #E54d42;
+    text-align: center;
+    display: table; }
+.listing__posts .post__date span {
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    font-size: .85em; }
+.listing__posts .post__container {
+    position: relative;
+    background: white;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 25px; }
+.listing__posts .post__container .post__photo {
+    position: absolute;
+    left: 0;
+    top: -30px;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: .85em;
+    color: white;
+    background: #E54d42;
+    cursor: pointer; }
+.listing__posts .post__container .post__title {
+    margin: 0 0 15px;
+    color: #131313; }
+.listing__posts .post__container .post__desc {
+    color: #E54d42;
+    font-weight: bold; }
+.listing__posts .post__container .post__detail {
+    margin: 20px 0 30px;
+    color: #555555;
+    line-height: 1.5em; }
+.listing__posts .post__container .post__info {
+    color: #808080; }
+.listing__posts .post__container .post__info__time {
+    display: inline-block;
+    margin-right: 10px; }
+.listing__posts .post__container .post__info__time .fontAwesome:before {
+    content: "\F017";
+    margin-right: 3px; }
+.listing__posts .post__container .post__info__comment {
+    display: inline-block; }
+.listing__posts .post__container .post__info__comment .fontAwesome:before {
+    content: "\F086";
+    margin-right: 3px; }
